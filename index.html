@@ -39,6 +39,9 @@
     }
   </script>
 
+  <!-- Supabase JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -77,7 +80,7 @@
 
 <body class="bg-alabaster text-charcoal font-sans antialiased selection:bg-terracotta selection:text-white min-h-screen">
 
-  <!-- Modal Ganti Foto (Drop File / Input Link URL) -->
+  <!-- Modal Ganti Foto (URL Saja) -->
   <div id="asset-modal" class="fixed inset-0 z-50 bg-espresso/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
     <div class="relative max-w-lg w-full bg-alabaster border border-stone-300 p-6 md:p-8 shadow-2xl">
       <button id="asset-modal-close" class="absolute top-4 right-4 text-charcoal hover:text-terracotta transition-colors p-2" aria-label="Tutup">
@@ -86,34 +89,15 @@
 
       <span class="text-[10px] uppercase font-mono tracking-editorial text-terracotta">Manajemen Asset Foto</span>
       <h3 id="modal-card-title" class="font-serif text-2xl text-espresso mt-1 mb-2">Ganti Foto Referensi</h3>
-      <p class="text-xs text-charcoal/70 font-light mb-6">Pilih file hasil download dari komputer Anda atau tempel link URL foto langsung.</p>
+      <p class="text-xs text-charcoal/70 font-light mb-6">Tempel link URL foto langsung (Unsplash, Pinterest, Cloudinary, dsb.). Perubahan tersimpan secara realtime ke semua device.</p>
 
-      <!-- Tab Opsi: File vs Link -->
-      <div class="space-y-5">
-        <!-- Opsi 1: Drop & Browse File Download Lokal -->
+      <div class="space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-espresso uppercase tracking-wider mb-2">1. Upload File (Drag &amp; Drop / Pilih File)</label>
-          <div id="modal-dropzone" class="border-2 border-dashed border-stone-300 hover:border-terracotta bg-linen/50 transition-colors p-6 text-center cursor-pointer flex flex-col items-center justify-center gap-2">
-            <i data-lucide="upload-cloud" class="w-7 h-7 text-terracotta stroke-[1.5]"></i>
-            <span class="text-xs text-charcoal/80 font-medium">Tarik &amp; lepas file foto di sini, atau <span class="text-terracotta underline">klik untuk cari file</span></span>
-            <span class="text-[10px] text-charcoal/50">Mendukung format JPG, PNG, WEBP</span>
-            <input type="file" id="modal-file-input" accept="image/*" class="hidden" />
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <span class="h-px bg-stone-200 flex-1"></span>
-          <span class="text-[10px] uppercase font-mono text-charcoal/40">Atau Gunakan Link</span>
-          <span class="h-px bg-stone-200 flex-1"></span>
-        </div>
-
-        <!-- Opsi 2: Input URL Link -->
-        <div>
-          <label for="modal-url-input" class="block text-xs font-semibold text-espresso uppercase tracking-wider mb-2">2. Tempel URL / Link Foto Online</label>
-          <div class="flex gap-2">
-            <input type="url" id="modal-url-input" placeholder="https://images.unsplash.com/... atau link pinterest" 
-                   class="flex-1 px-3.5 py-2.5 bg-paper border border-stone-300 text-xs text-espresso focus:outline-none focus:border-espresso" />
-            <button id="modal-save-url-btn" class="px-5 py-2.5 bg-espresso text-paper hover:bg-terracotta transition-colors text-xs uppercase tracking-wider font-medium">
+          <label for="modal-url-input" class="block text-xs font-semibold text-espresso uppercase tracking-wider mb-2">URL Foto</label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="url" id="modal-url-input" placeholder="https://images.unsplash.com/..." 
+                   class="flex-1 px-3.5 py-2.5 bg-paper border border-stone-300 text-xs text-espresso focus:outline-none focus:border-espresso font-mono" />
+            <button id="modal-save-url-btn" class="px-5 py-2.5 bg-espresso text-paper hover:bg-terracotta transition-colors text-xs uppercase tracking-wider font-medium disabled:opacity-50">
               Terapkan
             </button>
           </div>
@@ -121,8 +105,8 @@
       </div>
 
       <div class="mt-6 pt-4 border-t border-stone-200 flex items-center justify-between text-[11px] text-charcoal/60">
-        <span>Tersimpan otomatis di browser lokal</span>
-        <button id="modal-reset-btn" class="text-terracotta hover:underline">Kembalikan Default</button>
+        <span>Sinkronisasi otomatis antar device</span>
+        <button id="modal-reset-btn" class="text-terracotta hover:underline font-medium">Kembalikan Default</button>
       </div>
     </div>
   </div>
@@ -174,14 +158,15 @@
       </div>
       
       <div class="flex items-center gap-4">
+        <!-- Realtime Connection Status -->
+        <div id="realtime-status" class="inline-flex items-center gap-1.5 text-[11px] font-mono tracking-wider text-charcoal/60">
+          <span id="realtime-status-dot" class="inline-block w-2 h-2 rounded-full bg-stone-400"></span>
+          <span id="realtime-status-text">OFFLINE</span>
+        </div>
+        <span class="w-px h-3 bg-stone-300"></span>
         <button onclick="resetAllCustomImages()" class="text-charcoal/60 hover:text-terracotta transition-colors flex items-center gap-1.5 text-[11px] uppercase font-mono">
           <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
-          <span>Reset Foto</span>
-        </button>
-        <span class="w-px h-3 bg-stone-300"></span>
-        <button onclick="window.print()" class="text-terracotta hover:text-espresso transition-colors flex items-center gap-1.5 font-medium">
-          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
-          <span>Cetak Halaman</span>
+          <span>Reset Semua</span>
         </button>
       </div>
     </div>
@@ -984,37 +969,49 @@
     </div>
   </footer>
 
-  <!-- Vanilla JS Script untuk Filter, Lightbox, Drag & Drop, dan Custom Asset Link -->
+  <!-- Shared Realtime Moodboard Script via Supabase -->
   <script>
+    // -------------------------------------------------------------
+    // 1. SUPABASE CLIENT CONFIGURATION
+    // -------------------------------------------------------------
+    const SUPABASE_URL = 'https://YOUR_PROJECT_REF.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
+    const supabaseClient = (window.supabase && SUPABASE_URL && !SUPABASE_URL.includes('YOUR_PROJECT_REF'))
+      ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
+      : null;
+
     // Inisialisasi ikon Lucide
     lucide.createIcons();
 
-    // Helper Card ID assignment to all gallery items
+    // -------------------------------------------------------------
+    // 2. STORE DEFAULT IMAGES & ATTACH ACTION BUTTONS
+    // -------------------------------------------------------------
     const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach((item, index) => {
-      const cardId = item.getAttribute('data-id') || `shot-${index + 1}`;
-      item.setAttribute('data-id', cardId);
+    galleryItems.forEach((item) => {
+      const cardId = item.getAttribute('data-id');
+      const img = item.querySelector('img');
+      const imageContainer = item.querySelector('.relative.overflow-hidden');
 
-      const dropZone = item.querySelector('.relative.overflow-hidden');
-      if (dropZone && !dropZone.classList.contains('drop-zone')) {
-        dropZone.classList.add('drop-zone');
+      // Simpan URL default HTML asli
+      if (img && !item.dataset.defaultSrc) {
+        item.dataset.defaultSrc = img.src;
       }
 
-      // Add edit button to cards if not present
-      if (!item.querySelector('.edit-overlay-btn')) {
+      // Tombol Ganti Foto / Link
+      if (imageContainer && !item.querySelector('.edit-overlay-btn')) {
         const actionWrap = document.createElement('div');
         actionWrap.className = 'edit-overlay-btn absolute bottom-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10';
         actionWrap.innerHTML = `
           <button onclick="openAssetModal('${cardId}', event)" class="px-2.5 py-1.5 bg-paper/95 hover:bg-espresso hover:text-paper border border-stone-300 text-espresso text-[10px] uppercase tracking-wider font-medium shadow-sm transition-colors flex items-center gap-1.5">
-            <i data-lucide="image-plus" class="w-3 h-3 text-terracotta"></i>
-            <span>Ganti Foto / Link</span>
+            <i data-lucide="link-2" class="w-3 h-3 text-terracotta"></i>
+            <span>Ganti URL Foto</span>
           </button>
         `;
-        dropZone.appendChild(actionWrap);
+        imageContainer.appendChild(actionWrap);
       }
 
-      // Re-bind click event on img & title to open lightbox
-      const img = item.querySelector('img');
+      // Klik foto / judul untuk membuka Lightbox
       if (img) {
         img.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -1031,83 +1028,112 @@
     });
     lucide.createIcons();
 
-    // 1. LocalStorage Management for Custom Dropped/Linked Assets
-    const STORAGE_KEY = 'kreanata_syahida_custom_assets';
+    // -------------------------------------------------------------
+    // 3. REALTIME CONNECTION STATUS INDICATOR
+    // -------------------------------------------------------------
+    const statusDot = document.getElementById('realtime-status-dot');
+    const statusText = document.getElementById('realtime-status-text');
 
-    function loadSavedAssets() {
+    function setConnectionStatus(isLive) {
+      if (!statusDot || !statusText) return;
+      if (isLive) {
+        statusDot.className = 'inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+        statusText.textContent = 'LIVE';
+        statusText.className = 'text-emerald-700 font-semibold';
+      } else {
+        statusDot.className = 'inline-block w-2 h-2 rounded-full bg-stone-400';
+        statusText.textContent = 'OFFLINE';
+        statusText.className = 'text-charcoal/50';
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 4. SUPABASE INITIAL LOAD & REALTIME SYNCHRONIZATION
+    // -------------------------------------------------------------
+    async function loadSupabaseAssets() {
+      if (!supabaseClient) {
+        console.warn('Supabase client belum dikonfigurasi. Masukkan SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY.');
+        setConnectionStatus(false);
+        return;
+      }
+
       try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-        Object.keys(saved).forEach(cardId => {
-          const item = document.querySelector(`[data-id="${cardId}"]`);
-          if (item) {
-            const img = item.querySelector('img');
-            if (img && saved[cardId]) {
-              img.src = saved[cardId];
+        const { data, error } = await supabaseClient
+          .from('moodboard_assets')
+          .select('id, image_url');
+
+        if (error) {
+          console.error('Gagal mengambil data moodboard_assets:', error);
+          return;
+        }
+
+        if (Array.isArray(data)) {
+          data.forEach(row => {
+            applyCardImage(row.id, row.image_url);
+          });
+        }
+      } catch (err) {
+        console.error('Initial load error:', err);
+      }
+    }
+
+    function applyCardImage(cardId, imageUrl) {
+      const card = document.querySelector(`[data-id="${cardId}"]`);
+      if (!card) return;
+      const img = card.querySelector('img');
+      if (img && imageUrl) {
+        img.src = imageUrl;
+      }
+    }
+
+    function restoreDefaultImage(cardId) {
+      const card = document.querySelector(`[data-id="${cardId}"]`);
+      if (!card) return;
+      const img = card.querySelector('img');
+      if (img && card.dataset.defaultSrc) {
+        img.src = card.dataset.defaultSrc;
+      }
+    }
+
+    function initRealtimeSubscription() {
+      if (!supabaseClient) return;
+
+      const channel = supabaseClient
+        .channel('moodboard-realtime')
+        .on(
+          'postgres_changes',
+          { event: '*', schema: 'public', table: 'moodboard_assets' },
+          (payload) => {
+            const { eventType, new: newRecord, old: oldRecord } = payload;
+            if (eventType === 'INSERT' || eventType === 'UPDATE') {
+              if (newRecord && newRecord.id && newRecord.image_url) {
+                applyCardImage(newRecord.id, newRecord.image_url);
+              }
+            } else if (eventType === 'DELETE') {
+              if (oldRecord && oldRecord.id) {
+                restoreDefaultImage(oldRecord.id);
+              }
             }
           }
+        )
+        .subscribe((status) => {
+          if (status === 'SUBSCRIBED') {
+            setConnectionStatus(true);
+          } else if (status === 'CLOSED' || status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+            setConnectionStatus(false);
+          }
         });
-      } catch (e) {
-        console.error('Error loading saved assets: ', e);
-      }
     }
 
-    function saveAsset(cardId, src) {
-      try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-        saved[cardId] = src;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-      } catch (e) {
-        console.error('Error saving asset: ', e);
-      }
-    }
+    loadSupabaseAssets();
+    initRealtimeSubscription();
 
-    function resetAllCustomImages() {
-      if (confirm('Apakah Anda yakin ingin mengembalikan semua foto referensi ke default?')) {
-        localStorage.removeItem(STORAGE_KEY);
-        window.location.reload();
-      }
-    }
-
-    loadSavedAssets();
-
-    // 2. Direct Drag and Drop on Any Card
-    document.querySelectorAll('.drop-zone').forEach(zone => {
-      zone.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        zone.classList.add('ring-2', 'ring-terracotta', 'opacity-80');
-      });
-
-      zone.addEventListener('dragleave', () => {
-        zone.classList.remove('ring-2', 'ring-terracotta', 'opacity-80');
-      });
-
-      zone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        zone.classList.remove('ring-2', 'ring-terracotta', 'opacity-80');
-
-        const card = zone.closest('.gallery-item');
-        const cardId = card.getAttribute('data-id');
-        const files = e.dataTransfer.files;
-
-        if (files && files[0] && files[0].type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            const newSrc = event.target.result;
-            const img = zone.querySelector('img');
-            if (img) img.src = newSrc;
-            saveAsset(cardId, newSrc);
-          };
-          reader.readAsDataURL(files[0]);
-        }
-      });
-    });
-
-    // 3. Asset Modal (Pick Local File or Paste Link)
+    // -------------------------------------------------------------
+    // 5. ASSET MODAL (URL-ONLY INPUT, PERSISTENT TO SUPABASE)
+    // -------------------------------------------------------------
     let currentEditingCardId = null;
     const assetModal = document.getElementById('asset-modal');
     const assetModalClose = document.getElementById('asset-modal-close');
-    const modalDropzone = document.getElementById('modal-dropzone');
-    const modalFileInput = document.getElementById('modal-file-input');
     const modalUrlInput = document.getElementById('modal-url-input');
     const modalSaveUrlBtn = document.getElementById('modal-save-url-btn');
     const modalCardTitle = document.getElementById('modal-card-title');
@@ -1124,6 +1150,7 @@
       }
       assetModal.classList.remove('opacity-0', 'pointer-events-none');
       assetModal.classList.add('opacity-100');
+      modalUrlInput.focus();
     }
 
     function closeAssetModal() {
@@ -1137,73 +1164,90 @@
       if (e.target === assetModal) closeAssetModal();
     });
 
-    // File Input Click & Trigger
-    modalDropzone.addEventListener('click', () => modalFileInput.click());
-
-    modalFileInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file && file.type.startsWith('image/') && currentEditingCardId) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          const newSrc = event.target.result;
-          const card = document.querySelector(`[data-id="${currentEditingCardId}"]`);
-          if (card) {
-            const img = card.querySelector('img');
-            if (img) img.src = newSrc;
-            saveAsset(currentEditingCardId, newSrc);
-          }
-          closeAssetModal();
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
-    // Modal Drop Event
-    modalDropzone.addEventListener('dragover', (e) => e.preventDefault());
-    modalDropzone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      const files = e.dataTransfer.files;
-      if (files && files[0] && files[0].type.startsWith('image/') && currentEditingCardId) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          const newSrc = event.target.result;
-          const card = document.querySelector(`[data-id="${currentEditingCardId}"]`);
-          if (card) {
-            const img = card.querySelector('img');
-            if (img) img.src = newSrc;
-            saveAsset(currentEditingCardId, newSrc);
-          }
-          closeAssetModal();
-        };
-        reader.readAsDataURL(files[0]);
-      }
-    });
-
-    // Save URL Link Button
-    modalSaveUrlBtn.addEventListener('click', () => {
+    // Simpan URL Foto Baru ke Supabase
+    modalSaveUrlBtn.addEventListener('click', async () => {
       const url = modalUrlInput.value.trim();
-      if (url && currentEditingCardId) {
-        const card = document.querySelector(`[data-id="${currentEditingCardId}"]`);
-        if (card) {
-          const img = card.querySelector('img');
-          if (img) img.src = url;
-          saveAsset(currentEditingCardId, url);
+      if (!url) {
+        alert('Silakan masukkan link URL foto yang valid.');
+        return;
+      }
+      if (!/^https?:\/\//i.test(url)) {
+        alert('URL harus diawali dengan http:// atau https://');
+        return;
+      }
+      if (!currentEditingCardId) return;
+
+      const cardId = currentEditingCardId;
+      // Optimistic update lokal
+      applyCardImage(cardId, url);
+      closeAssetModal();
+
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('moodboard_assets')
+          .upsert({
+            id: cardId,
+            image_url: url,
+            updated_at: new Date().toISOString()
+          });
+
+        if (error) {
+          console.error('Gagal menyimpan URL ke Supabase:', error);
+          alert('Gagal menyimpan ke database Supabase: ' + error.message);
         }
-        closeAssetModal();
       }
     });
 
-    // Reset Single Card Image
-    modalResetBtn.addEventListener('click', () => {
-      if (currentEditingCardId) {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-        delete saved[currentEditingCardId];
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-        window.location.reload();
+    // Kembalikan Foto Card ke Default HTML
+    modalResetBtn.addEventListener('click', async () => {
+      if (!currentEditingCardId) return;
+      const cardId = currentEditingCardId;
+
+      restoreDefaultImage(cardId);
+      closeAssetModal();
+
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('moodboard_assets')
+          .delete()
+          .eq('id', cardId);
+
+        if (error) {
+          console.error('Gagal menghapus custom asset dari Supabase:', error);
+          alert('Gagal mengembalikan ke default di database: ' + error.message);
+        }
       }
     });
 
-    // 4. SISTEM HALAMAN MANDIRI TIAP BAGIAN PHOTOSHOOT
+    // Reset Semua Foto ke Default HTML
+    async function resetAllCustomImages() {
+      if (!confirm('Apakah Anda yakin ingin mengembalikan SEMUA foto referensi ke default? Tindakan ini berlaku untuk seluruh device.')) {
+        return;
+      }
+
+      // Kembalikan semua card di UI lokal
+      galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        if (img && item.dataset.defaultSrc) {
+          img.src = item.dataset.defaultSrc;
+        }
+      });
+
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('moodboard_assets')
+          .delete()
+          .neq('id', '');
+
+        if (error) {
+          console.error('Gagal mereset data Supabase:', error);
+          alert('Gagal mereset semua data di Supabase: ' + error.message);
+        }
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 6. SISTEM HALAMAN MANDIRI TIAP BAGIAN PHOTOSHOOT
     const pageTabs = document.querySelectorAll('.page-tab-btn');
     const photoPages = document.querySelectorAll('.photoshoot-page');
     const pageCounter = document.getElementById('page-counter');
@@ -1280,7 +1324,9 @@
     // Initialize to first page
     showPage(0);
 
-    // 2. Lightbox / Modal Pembesar Foto Detail
+    // -------------------------------------------------------------
+    // 7. LIGHTBOX / MODAL PEMBESAR FOTO DETAIL
+    // -------------------------------------------------------------
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxTitle = document.getElementById('lightbox-title');
