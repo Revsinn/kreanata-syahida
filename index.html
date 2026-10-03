@@ -974,17 +974,15 @@
     // -------------------------------------------------------------
     // 1. SUPABASE CLIENT CONFIGURATION
     // -------------------------------------------------------------
-    // Silakan isi SUPABASE_URL dan SUPABASE_ANON_KEY proyek Supabase Anda.
-    // Jika menggunakan environment/window config, nilai ini akan otomatis dipakai.
-    const SUPABASE_URL = window.ENV_SUPABASE_URL || 'https://gnuvmwfouavxgxahhvae.supabase.co';
-    const SUPABASE_ANON_KEY = window.ENV_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdudXZtd2ZvdWF2eGd4YWhodmFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEwMTY4MTksImV4cCI6MjEwNjU5MjgxOX0.AzYzV5I1uKItTnhBBeI3ooLtTJd_CS8m2gvpnxm4ckA';
+    const SUPABASE_URL = 'https://gnuvmwfouavxgxahhvae.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdudXZtd2ZvdWF2eGd4YWhodmFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEwMTY4MTksImV4cCI6MjEwNjU5MjgxOX0.AzYzV5I1uKItTnhBBeI3ooLtTJd_CS8m2gvpnxm4ckA';
 
     const isSupabaseConfigured = 
       Boolean(window.supabase) &&
-      SUPABASE_URL &&
-      !SUPABASE_URL.includes('https://gnuvmwfouavxgxahhvae.supabase.co') &&
-      SUPABASE_ANON_KEY &&
-      !SUPABASE_ANON_KEY.includes('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdudXZtd2ZvdWF2eGd4YWhodmFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEwMTY4MTksImV4cCI6MjEwNjU5MjgxOX0.AzYzV5I1uKItTnhBBeI3ooLtTJd_CS8m2gvpnxm4ckA');
+      Boolean(SUPABASE_URL) &&
+      !SUPABASE_URL.includes('YOUR_PROJECT_REF') &&
+      Boolean(SUPABASE_ANON_KEY) &&
+      !SUPABASE_ANON_KEY.includes('YOUR_SUPABASE_ANON_KEY');
 
     // Supabase client diinisialisasi hanya satu kali
     const supabaseClient = isSupabaseConfigured
