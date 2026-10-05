@@ -123,27 +123,30 @@
       </div>
       <div class="md:w-2/5 flex flex-col justify-between py-2">
         <div>
-          <span id="lightbox-category" class="text-[10px] uppercase font-mono tracking-editorial text-terracotta">Kategori</span>
-          <h3 id="lightbox-title" class="font-serif text-3xl text-espresso mt-2 mb-3 leading-snug">Judul Foto</h3>
-          <p id="lightbox-desc" class="text-xs text-charcoal/80 leading-relaxed font-light mb-6">Catatan visual dan instruksi penataan framing.</p>
+          <div class="flex items-center gap-2 mb-2">
+            <span id="lightbox-category" class="text-[10px] uppercase font-mono tracking-editorial text-terracotta">Kategori</span>
+            <span class="text-[9px] font-mono uppercase bg-sand/70 text-charcoal px-2 py-0.5">Visual Reference</span>
+          </div>
+          <h3 id="lightbox-title" class="font-serif text-2xl md:text-3xl text-espresso mb-3 leading-snug">Judul Foto</h3>
+          <p id="lightbox-desc" class="text-xs text-charcoal/80 leading-relaxed font-light mb-6">Instruksi shotlist dan arahan penataan.</p>
           <div class="border-t border-stone-200/80 pt-4 space-y-2 text-[11px] text-charcoal/70">
             <div class="flex justify-between">
               <span class="text-charcoal/50">PENCAHAYAAN</span>
-              <span id="lightbox-light">Soft Morning Natural Light</span>
+              <span id="lightbox-light">Natural / Available Light</span>
             </div>
             <div class="flex justify-between">
-              <span class="text-charcoal/50">LENSA / SUDUT</span>
-              <span id="lightbox-ratio">f/2.8 — 50mm Editorial Prime</span>
+              <span class="text-charcoal/50">REKOMENDASI LENSA</span>
+              <span id="lightbox-ratio">Wide / 24–28mm</span>
             </div>
             <div class="flex justify-between">
               <span class="text-charcoal/50">SUASANA / MOOD</span>
-              <span id="lightbox-mood">Quiet Luxury</span>
+              <span id="lightbox-mood">Clean &amp; Comfortable</span>
             </div>
           </div>
         </div>
         <div class="mt-8 pt-4 border-t border-stone-200/80 flex items-center justify-between text-[11px]">
-          <span class="text-charcoal/40 font-mono">KURASI KREANATA</span>
-          <span class="text-terracotta font-medium tracking-wider">PANDUAN VISUAL FOTO</span>
+          <span class="text-charcoal/40 font-mono">SHOTLIST HOTEL NYATA</span>
+          <span class="text-terracotta font-medium tracking-wider">REFERENSI VISUAL PRODUKSI</span>
         </div>
       </div>
     </div>
@@ -180,13 +183,14 @@
       <div class="bg-linen/60 border border-stone-200/70 p-6 md:p-8 mb-6">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div class="space-y-2">
-            <div class="flex items-center gap-2">
-              <span class="px-2.5 py-1 bg-espresso text-paper text-[9px] uppercase font-mono tracking-widest font-semibold">Master Moodboard</span>
-              <span class="text-[10px] font-mono tracking-editorial text-terracotta uppercase font-medium">Production Shotlist Deck</span>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-2.5 py-1 bg-espresso text-paper text-[9px] uppercase font-mono tracking-widest font-semibold">Production Shot List</span>
+              <span class="text-[10px] font-mono tracking-editorial text-terracotta uppercase font-medium">Realistic Hotel Direction</span>
+              <span class="text-[9px] font-mono uppercase bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5">Semua foto adalah Referensi Visual</span>
             </div>
-            <h1 class="font-serif font-bold text-2xl sm:text-3xl text-espresso tracking-tight">Direksi Moodboard &amp; Rencana Shotlist Foto</h1>
+            <h1 class="font-serif font-bold text-2xl sm:text-3xl text-espresso tracking-tight">Rencana Shot List Pemotretan Hotel</h1>
             <p class="text-xs md:text-sm text-charcoal/80 font-normal max-w-3xl leading-relaxed">
-              Panduan visual dan acuan referensi foto untuk tim fotografer, stylist, dan manajemen hotel dalam menentukan sudut bidik, prop styling, tata letak, dan pencahayaan tiap area.
+              Panduan produksi terukur untuk fotografer dan tim hotel. Fokus pada dokumentasi rapi, fungsi ruang aktual, dan aset visual yang benar-benar dipakai untuk website hotel, OTA, dan Google Business Profile tanpa properti berlebihan.
             </p>
           </div>
         </div>
@@ -194,8 +198,8 @@
 
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-200/80 pb-6">
         <div>
-          <span class="text-[10px] uppercase font-mono tracking-editorial text-terracotta">Navigasi Bagian Moodboard</span>
-          <h2 class="font-serif text-2xl md:text-3xl text-espresso mt-0.5">Pilih Halaman Moodboard Photoshoot</h2>
+          <span class="text-[10px] uppercase font-mono tracking-editorial text-terracotta">Navigasi Area Pemotretan</span>
+          <h2 class="font-serif text-2xl md:text-3xl text-espresso mt-0.5">Pilih Bagian Photoshoot</h2>
         </div>
         <div class="text-xs font-mono text-charcoal/50">
           <span id="page-counter" class="text-terracotta font-semibold">HALAMAN 1</span> DARI 6 BAGIAN
@@ -214,13 +218,13 @@
           3. Lobby Hotel
         </button>
         <button class="page-tab-btn px-4 py-2.5 border border-stone-200 bg-paper text-charcoal/80 hover:border-stone-400 text-xs uppercase tracking-wider font-medium transition-all" data-target-page="page-fasilitas">
-          4. Fasilitas (Ballroom &amp; Gym)
+          4. Fasilitas Hotel
         </button>
         <button class="page-tab-btn px-4 py-2.5 border border-stone-200 bg-paper text-charcoal/80 hover:border-stone-400 text-xs uppercase tracking-wider font-medium transition-all" data-target-page="page-eksterior">
           5. Eksterior Gedung
         </button>
         <button class="page-tab-btn px-4 py-2.5 border border-stone-200 bg-paper text-charcoal/80 hover:border-stone-400 text-xs uppercase tracking-wider font-medium transition-all" data-target-page="page-menu">
-          6. Menu Makanan (Buku Menu)
+          6. Signature F&amp;B Selection
         </button>
       </nav>
     </section>
@@ -229,1000 +233,919 @@
     <div id="pages-container" class="max-w-7xl mx-auto px-6 md:px-12 py-8">
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 1: KAMAR HOTEL DELUXE (KOMPILASI BANYAK ANGLE DELUXE) -->
+      <!-- HALAMAN 1: KAMAR HOTEL DELUXE (5 ANGLE UTAMA REALISTIS)       -->
       <!-- ============================================================== -->
       <section id="page-deluxe" class="photoshoot-page block">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 01</span> &bull; <span>Syahida Inn</span>
+            <span>Bagian 01</span> &bull; <span>5 Angle Utama</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Kamar Hotel Deluxe</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Kamar Deluxe</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi sudut pengambilan gambar untuk tipe kamar Deluxe. Fokus pada kerapian linen ranjang, pencahayaan alami jendela, sudut pandang menyeluruh (wide), area meja kerja fungsional, dan kebersihan kamar mandi.
+            Dokumentasi rapi kamar Deluxe yang fokus pada fungsi ruang sesungguhnya. Tanpa penataan properti berlebihan, berorientasi langsung pada kebutuhan foto kamar website hotel dan platform OTA.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Hero Bed Angle -->
+          <!-- 1. Deluxe — Room Overview -->
           <div class="gallery-item md:col-span-8 group cursor-pointer" data-id="deluxe-1"
-               data-title="Kamar Deluxe: Hero Bed &amp; Headboard Center Angle"
-               data-category-label="Kamar Deluxe &bull; Hero Bed"
-               data-desc="Ranjang King berbalut selimut katun putih bersih tanpa kerutan kaku, aksen headboard kayu jati hangat, bantal tersusun simetris, dan cahaya pagi lembut menembus vitrase."
-               data-light="Pagi Jam 08.00 Daylight Jendela Alami"
-               data-ratio="35mm &bull; f/3.5 Eye-Level Ranjang"
-               data-mood="Rapi, Hangat, Bersih &amp; Terpercaya">
+               data-title="Deluxe — Room Overview"
+               data-category-label="Kamar Deluxe &bull; Room Overview"
+               data-desc="Foto wide yang memperlihatkan keseluruhan layout kamar secara rapi dan mudah dipahami calon tamu. Fokus pada hubungan tempat tidur, jendela, dan sirkulasi ruang."
+               data-light="Natural / Available Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Clean, Bright, Comfortable">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80" 
-                   alt="Kamar Hotel Deluxe Hero Bed Angle" 
+              <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1600&q=80" 
+                   alt="Deluxe — Room Overview" 
                    class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 01 : Hero Bed
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Hero Bed &amp; Headboard Framing</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Center View</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Deluxe — Room Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Bidikan utama ranjang tegak lurus untuk landing page website dan foto kartu OTA.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Foto wide yang memperlihatkan keseluruhan layout kamar secara rapi dan proporsional.</p>
           </div>
 
-          <!-- 2. Wide Room Overview -->
+          <!-- 2. Deluxe — Bed / Main Room Angle -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="deluxe-2"
-               data-title="Kamar Deluxe: Wide Overview Ruangan Penuh"
-               data-category-label="Kamar Deluxe &bull; Wide Angle"
-               data-desc="Sudut bidik lebar dari sudut pintu masuk memperlihatkan keseluruhan sirkulasi ruangan, penempatan ranjang, meja kerja, dan jendela kaca luar."
-               data-light="Cahaya Alami Luas (Ambient Window Light)"
-               data-ratio="24mm Wide &bull; f/5.6 Tajam Merata"
-               data-mood="Lapang, Nyaman &amp; Terbuka">
+               data-title="Deluxe — Bed / Main Room Angle"
+               data-category-label="Kamar Deluxe &bull; Main Bed"
+               data-desc="Fokus pada area tempat tidur sebagai hero shot kamar. Sudut straight atau sedikit diagonal dengan linen yang disetrika rapi dan bantal tertata simetris."
+               data-light="Natural Light + Soft Ambient"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Clean, Neat, Welcoming">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Kamar Deluxe Hotel Wide Room View" 
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Deluxe — Bed / Main Room Angle" 
                    class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 02 : Wide
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Wide Room Layout &amp; Sirkulasi</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Corner Entry</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Deluxe — Bed / Main Room Angle</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memberi gambaran proporsi ruang yang sesungguhnya kepada calon tamu.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Hero image tempat tidur utama untuk thumbnail pemesanan kamar dan OTA.</p>
           </div>
 
-          <!-- 3. Working Desk Area -->
+          <!-- 3. Deluxe — Room Corner / Workspace -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="deluxe-3"
-               data-title="Kamar Deluxe: Dedicated Working Desk &amp; Amenities"
-               data-category-label="Kamar Deluxe &bull; Working Area"
-               data-desc="Meja kerja hotel dengan kursi sandaran nyaman, lampu meja hangat menyala, stopkontak, notepad hotel, serta cangkir teh dan water kettle."
-               data-light="Cahaya Samping Jendela + Lampu Meja 3000K"
-               data-ratio="50mm &bull; f/2.8 Depth of Field Halus"
-               data-mood="Fungsional, Rapi &amp; Produktif">
+               data-title="Deluxe — Room Corner / Workspace"
+               data-category-label="Kamar Deluxe &bull; Workspace Corner"
+               data-desc="Ambil salah satu sudut kamar yang memiliki fungsi jelas (meja kerja, kursi, atau area fungsional yang memang tersedia di kamar). Hindari menambah properti asing."
+               data-light="Available Room Light"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Functional, Neat">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Meja Kerja Kamar Hotel Deluxe" 
+                   alt="Deluxe — Room Corner / Workspace" 
                    class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 03 : Working Area
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 03</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Meja Kerja &amp; Hospitality Setup</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Desk Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Deluxe — Room Corner / Workspace</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kebutuhan esensial bagi pebisnis dan tamu dinas di Syahida Inn.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menampilkan area fungsional kamar yang relevan untuk kebutuhan tamu dinas.</p>
           </div>
 
-          <!-- 4. Bathroom & Vanity -->
+          <!-- 4. Deluxe — Bathroom -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="deluxe-4"
-               data-title="Kamar Deluxe: Bathroom, Vanity Mirror &amp; Shower Glass"
-               data-category-label="Kamar Deluxe &bull; Bathroom"
-               data-desc="Kamar mandi bersih dengan cermin berlampu LED, wastafel marmer putih, botol amenities tertata rapi, dan partisi kaca shower kering terawat."
-               data-light="LED Vanity Warm White 4000K"
-               data-ratio="28mm &bull; f/4.0 Sudut Bebas Pantulan"
-               data-mood="Higienis, Segar &amp; Bersih Sempurna">
+               data-title="Deluxe — Bathroom"
+               data-category-label="Kamar Deluxe &bull; Kamar Mandi"
+               data-desc="Foto wide kamar mandi yang memperlihatkan kebersihan, wastafel, cermin, dan area shower secara jujur dan informatif. Keringkan permukaan sebelum shot."
+               data-light="Available Bathroom Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Clean, Bright, Functional">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Kamar Mandi Hotel Deluxe Bersih dan Modern" 
+                   alt="Deluxe — Bathroom" 
                    class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 04 : Bathroom
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 04</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Bathroom Vanity &amp; Shower</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Mirror Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Deluxe — Bathroom</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sudut krusial yang menentukan standar kebersihan kamar hotel.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tampilan kebersihan dan fungsi kamar mandi yang meyakinkan calon pengunjung.</p>
           </div>
 
-          <!-- 5. Bedside Detail & Ambiance -->
+          <!-- 5. Deluxe — Room Detail / Amenity -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="deluxe-5"
-               data-title="Kamar Deluxe: Detail Meja Nakas &amp; Lampu Baca"
-               data-category-label="Kamar Deluxe &bull; Close-up Detail"
-               data-desc="Close-up meja nakas kayu: sakelar lampu terintegrasi, telepon kamar, botol air mineral, dan gelas kaca bersih diterpa lampu baca temaram."
-               data-light="Lampu Baca Temaram Samping"
-               data-ratio="50mm &bull; f/2.2 Shallow Depth"
-               data-mood="Intim, Tenang &amp; Nyaman">
+               data-title="Deluxe — Room Detail / Amenity"
+               data-category-label="Kamar Deluxe &bull; Room Detail"
+               data-desc="Detail pendukung sederhana seperti perlengkapan amenities, rak/lemari, atau setup teh/kopi yang memang disediakan hotel. Tanpa setup lifestyle buatan."
+               data-light="Natural / Soft Light"
+               data-ratio="Detail (50–85mm)"
+               data-mood="Neat, Simple, Comfortable">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80" 
-                   alt="Detail Nakas dan Lampu Kamar Hotel Deluxe" 
-                   class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 05 : Detail
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Bedside Table &amp; Warm Mood Lamp</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Macro Detail</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menampilkan sentuhan kenyamanan beristirahat saat malam hari.</p>
-          </div>
-
-          <!-- 6. Morning Coffee & Window Silhouette -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="deluxe-6"
-               data-title="Kamar Deluxe: Morning Light by Window &amp; In-Room Coffee"
-               data-category-label="Kamar Deluxe &bull; Moodboard Lifestyle"
-               data-desc="Bidikan moodboard estetik di samping jendela: cangkir keramik kopi hangat dengan kepulan asap tipis, buku bacaan terbuka di tepian selimut, dan sinar matahari pagi menyapu lantai kayu."
-               data-light="Morning Golden Hour Jendela Samping"
-               data-ratio="50mm &bull; f/2.0 Depth of Field Sinematik"
-               data-mood="Tenang, Santai, Sensori Hangat">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1517840905240-472988babdf9?auto=format&fit=crop&w=1400&q=80" 
-                   alt="Morning Coffee Kamar Hotel Moodboard" 
-                   class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 06 : Morning Vibe
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Morning Light &amp; Lifestyle Window Vibe</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Lifestyle Mood</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Membangun daya tarik emosional ketenangan pagi hari bagi tamu yang menginap.</p>
-          </div>
-
-          <!-- 7. Wardrobe, Luggage Bench & Amenities -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="deluxe-7"
-               data-title="Kamar Deluxe: Lemari Pakaian &amp; Luggage Rack"
-               data-category-label="Kamar Deluxe &bull; Storage &amp; Wardrobe"
-               data-desc="Penataan area lemari terbuka beraksen kayu minimalis: gantungan baju kayu sejajar rapi, sandal hotel putih lembut di rak bawah, dan koper kabin di atas luggage bench."
-               data-light="Diffused Natural Light + Downlight Lemari"
-               data-ratio="35mm &bull; f/3.5 Straight Framing"
-               data-mood="Tertata, Higienis &amp; Fungsional">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1400&q=80" 
-                   alt="Lemari Pakaian dan Luggage Kamar Hotel Deluxe" 
+                   alt="Deluxe — Room Detail / Amenity" 
                    class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Deluxe &bull; Angle 07 : Storage
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 05</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Wardrobe &amp; Luggage Bench Setup</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Storage Detail</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Deluxe — Room Detail / Amenity</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Detail (50–85mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memperlihatkan ruang simpan bawaan tamu yang rapi dan lapang.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Mendokumentasikan detail fasilitas dan perlengkapan kamar yang nyata.</p>
           </div>
         </div>
       </section>
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 2: KAMAR HOTEL SUITE (KOMPILASI BANYAK ANGLE SUITE)   -->
+      <!-- HALAMAN 2: KAMAR HOTEL SUITE (5 ANGLE UTAMA REALISTIS)        -->
       <!-- ============================================================== -->
       <section id="page-suite" class="photoshoot-page hidden">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 02</span> &bull; <span>Syahida Inn &amp; Syahida Inn 2</span>
+            <span>Bagian 02</span> &bull; <span>5 Angle Utama</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Kamar Hotel Suite</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Kamar Suite</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi sudut pemotretan khusus unit Suite Room. Menonjolkan area living room terpisah, sofa bersantai premium, ranjang King utama, meja kerja eksekutif, dan fasilitas kamar mandi suite yang lebih mewah.
+            Menampilkan kelebihan ruang kamar Suite tanpa mengasumsikan furniture fiktif. Fokus pada alur ruang, area tempat tidur, ruang duduk santai jika tersedia, dan kamar mandi representatif.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Suite Living Room & Bed Combination -->
+          <!-- 1. Suite — Room Overview -->
           <div class="gallery-item md:col-span-8 group cursor-pointer" data-id="suite-1"
-               data-title="Kamar Suite: Living Area &amp; Master Bed Panorama"
-               data-category-label="Kamar Suite &bull; Living Space"
-               data-desc="Bidik diagonal menampilkan ruang santai tamu: sofa empuk bernuansa beige, coffee table marmer, Smart TV besar, terhubung dengan master bed king size."
-               data-light="Pagi Hari Jendela Luas + Downlight Warm"
-               data-ratio="28mm &bull; f/4.0 Sudut Diagonal Elegan"
-               data-mood="Eksklusif, Lega &amp; Mewah">
+               data-title="Suite — Room Overview"
+               data-category-label="Kamar Suite &bull; Suite Overview"
+               data-desc="Foto wide yang memperlihatkan layout utama tipe Suite. Menunjukkan proporsi ruang yang lebih lapang dibanding tipe Deluxe secara natural."
+               data-light="Natural / Available Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Spacious, Clean, Comfortable">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Kamar Hotel Suite dengan Living Room dan Ranjang King" 
+                 alt="Suite — Room Overview" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 01 : Living Room &amp; Bed
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite Living Area &amp; King Bedroom</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Panorama Suite</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite — Room Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Poin visual penentu kemewahan tipe Suite untuk tamu VIP dan keluarga.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Foto wide utama yang memperlihatkan tata ruang lapang unit Suite.</p>
           </div>
 
-          <!-- 2. Master Bed Hero Angle -->
+          <!-- 2. Suite — Sleeping Area -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="suite-2"
-               data-title="Kamar Suite: Master Bed Side Perspective"
-               data-category-label="Kamar Suite &bull; Master Bed"
-               data-desc="Sudut miring 45 derajat ranjang king dengan headboard kulit/kayu elegan, bantal berlapis aksen terakota, dan tirai gorden tebal bergaya hotel bintang."
-               data-light="Cahaya Samping Lembut (Diffused Window)"
-               data-ratio="45mm &bull; f/2.8"
-               data-mood="Menenteramkan &amp; Anggun">
+               data-title="Suite — Sleeping Area"
+               data-category-label="Kamar Suite &bull; Sleeping Area"
+               data-desc="Foto area tempat tidur kamar Suite. Fokus pada kerapian linen, kenyamanan istirahat, dan hubungan ranjang dengan bukaan cahaya kamar."
+               data-light="Natural Light + Soft Ambient"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Clean, Warm, Comfortable">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Kamar Suite Master Bed Side Angle" 
+                 alt="Suite — Sleeping Area" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 02 : Master Bed
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Master Bed 45&deg; Perspective</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">45mm &bull; 45-Degree Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite — Sleeping Area</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tekstur sprei bersih dan kerapian selimut terlihat sangat detail.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Area tidur utama yang tertata bersih untuk memberikan impresi relaksasi optimal.</p>
           </div>
 
-          <!-- 3. Suite Executive Work Desk -->
+          <!-- 3. Suite — Living / Sitting Area -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="suite-3"
-               data-title="Kamar Suite: Executive Working &amp; Meeting Desk"
-               data-category-label="Kamar Suite &bull; Meja Kerja"
-               data-desc="Area meja kerja eksekutif berukuran lebih panjang dengan kursi kulit beroda, lampu meja arsitektural, dan stopkontak lengkap."
-               data-light="Cahaya Samping Jendela + Task Light"
-               data-ratio="35mm &bull; f/3.2"
-               data-mood="Professional &amp; Nyaman">
+               data-title="Suite — Living / Sitting Area"
+               data-category-label="Kamar Suite &bull; Living Area"
+               data-desc="HANYA jika memang tersedia area duduk di unit Suite: foto sofa, kursi, atau meja santai aktual tanpa mengklaim perabotan yang tidak ada."
+               data-light="Available Room Light"
+               data-ratio="Wide / Standard (28–35mm)"
+               data-mood="Comfortable, Functional">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Meja Kerja Eksekutif Kamar Suite" 
+                 alt="Suite — Living / Sitting Area" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 03 : Desk Area
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 03</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Executive Workspace</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Desk Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite — Living / Sitting Area</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide / Standard (28–35mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Fasilitas pendukung tamu dinas pimpinan instansi dan delegasi rapat.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Area duduk santai aktual yang membedakan tipe Suite dengan tipe kamar standar.</p>
           </div>
 
-          <!-- 4. Luxury Suite Bathroom -->
+          <!-- 4. Suite — Bathroom -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="suite-4"
-               data-title="Kamar Suite: Luxury Bathroom &amp; Marble Details"
-               data-category-label="Kamar Suite &bull; Suite Bathroom"
-               data-desc="Kamar mandi luas unit Suite dengan dinding marmer/granit elegan, wastafel ganda atau meja wastafel lapang, amenities premium, dan handuk tebal terlipat rapi."
-               data-light="Pencahayaan Downlight Marmer Mewah"
-               data-ratio="28mm &bull; f/4.0"
-               data-mood="Mewah, Bersih &amp; Relaksasi">
+               data-title="Suite — Bathroom"
+               data-category-label="Kamar Suite &bull; Kamar Mandi"
+               data-desc="Foto kamar mandi suite secara representatif. Fokus pada kebersihan, tata letak cermin, wastafel, dan shower yang memang ada di lokasi."
+               data-light="Available Bathroom Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Clean, Bright, Functional">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Kamar Mandi Suite Hotel Mewah" 
+                 alt="Suite — Bathroom" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 04 : Bathroom
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 04</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite Marble Bathroom &amp; Mirror</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Vanity Wide</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite — Bathroom</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memancarkan kelas kamar suite yang berada setingkat di atas deluxe.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tampilan kamar mandi suite yang bersih, fungsional, dan tertata rapi.</p>
           </div>
 
-          <!-- 5. Minibar & Wardrobe Setup -->
+          <!-- 5. Suite — Supporting Detail / Workspace -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="suite-5"
-               data-title="Kamar Suite: Minibar, Kulkas &amp; Lemari Terbuka"
-               data-category-label="Kamar Suite &bull; Minibar Setup"
-               data-desc="Sudut fasilitas complimentary: lemari pakaian rapi dengan hanger kayu, bathrobe bersih, safety box, kulkas minibar, dan coffee maker canggih."
-               data-light="Lampu Lemari LED Tersembunyi"
-               data-ratio="35mm &bull; f/2.8"
-               data-mood="Lengkap &amp; Praktis">
+               data-title="Suite — Supporting Detail / Workspace"
+               data-category-label="Kamar Suite &bull; Detail &amp; Workspace"
+               data-desc="Meja kerja, lemari pakaian, atau sudut fungsional lain yang tersedia. Dipilih berdasarkan kondisi aktual kamar saat survey lokasi."
+               data-light="Natural / Available Light"
+               data-ratio="Standard / Detail (35–50mm)"
+               data-mood="Functional, Neat">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Minibar dan Fasilitas Kamar Suite" 
+                 alt="Suite — Supporting Detail / Workspace" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 05 : Amenities
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 05</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Wardrobe &amp; Minibar Station</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Minibar Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Suite — Supporting Detail / Workspace</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Detail (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kelengkapan amenities premium penunjang masa tinggal yang lebih panjang.</p>
-          </div>
-
-          <!-- 6. Suite Evening Turndown & Ambient Mood -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="suite-6"
-               data-title="Kamar Suite: Evening Turndown &amp; Warm Ambiance"
-               data-category-label="Kamar Suite &bull; Evening Turndown"
-               data-desc="Nuansa malam kamar Suite dengan pencahayaan hangat tersembunyi (cove light), selimut ranjang dilipat siap tidur (turndown service), dan tirai blackout ditutup rapi."
-               data-light="Lampu Temaram 2700K Malam Hari"
-               data-ratio="35mm &bull; f/2.5 Suasana Hangat"
-               data-mood="Damai, Mewah &amp; Nyenyak">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Kamar Suite Malam Hari Turndown Service" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 06 : Turndown Mood
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Evening Turndown &amp; Ambient Glow</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Evening Mood</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menonjolkan pengalaman beristirahat santai tanpa gangguan bising.</p>
-          </div>
-
-          <!-- 7. In-Room Dining & Suite Living Space -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="suite-7"
-               data-title="Kamar Suite: In-Room Dining Breakfast Platter di Ruang Tamu"
-               data-category-label="Kamar Suite &bull; In-Room Dining"
-               data-desc="Baki hidangan sarapan in-room dining di coffee table sofa living room Suite: teko kopi perak, croissant segar, jus jeruk, dan vas bunga anggrek mini."
-               data-light="Cahaya Samping Pagi dari Balcon/Jendela Kaca"
-               data-ratio="50mm &bull; f/2.8 Shallow Platter"
-               data-mood="Santai, Personal &amp; Hospitality Tinggi">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1400&q=80" 
-                 alt="In-Room Dining Sarapan Kamar Suite" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Suite &bull; Angle 07 : In-Room Dining
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">In-Room Dining Experience in Living Suite</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Dining Setup</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Bukti kenyamanan privasi bersantap santai di dalam kamar Suite.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sudut fungsional pendukung yang membuktikan kenyamanan menginap lebih lama.</p>
           </div>
         </div>
       </section>
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 3: LOBBY HOTEL (KOMPILASI BANYAK ANGLE LOBBY)         -->
+      <!-- HALAMAN 3: LOBBY HOTEL (5 ANGLE UTAMA REALISTIS)              -->
       <!-- ============================================================== -->
       <section id="page-lobby" class="photoshoot-page hidden">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 03</span> &bull; <span>Area Publik &amp; Kedatangan Tamu</span>
+            <span>Bagian 03</span> &bull; <span>5 Angle Utama</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Lobby Hotel Syahida Inn</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Lobby Hotel</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi sudut pemotretan area Lobby hotel bisnis &amp; konvensi kota. Fokus pada meja resepsionis (front desk check-in) fungsional, keramahan petugas front office, deretan sofa ruang tunggu lobby berlantai keramik bersih, dan koridor lift tamu.
+            Menampilkan area publik kedatangan tamu dengan alur sederhana: sudut luas lobby, meja resepsionis, area tunggu, koridor lift, dan detail identitas hotel tanpa dekorasi buatan atau tata lampu berlebihan.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Real Reception Counter Desk -->
+          <!-- 1. Lobby — Overview -->
           <div class="gallery-item md:col-span-7 group cursor-pointer" data-id="lobby-1"
-               data-title="Lobby Hotel: Meja Resepsionis &amp; Front Desk Check-in"
-               data-category-label="Lobby Hotel &bull; Meja Resepsionis"
-               data-desc="Meja resepsionis hotel asli dengan meja counter kayu fungsional, layar monitor check-in, keycard holder, bel meja kuningan, dan staf siap melayani tamu dengan ramah."
-               data-light="Pencahayaan Downlight Interior Warm White 3000K"
-               data-ratio="35mm &bull; f/4.0 Sejajar Mata (Eye-Level Counter)"
-               data-mood="Rapi, Resik, Formal &amp; Bersahabat">
+               data-title="Lobby — Overview"
+               data-category-label="Lobby &bull; Lobby Overview"
+               data-desc="Wide shot area lobby yang memperlihatkan ruangan secara menyeluruh, alur sirkulasi masuk, dan keterbukaan ruang kedatangan."
+               data-light="Natural / Available Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Spacious, Clean, Welcoming">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Meja Resepsionis Front Desk Hotel Kota" 
+              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Lobby — Overview" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 01 : Meja Resepsionis
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Front Desk &amp; Meja Resepsionis Check-In</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Front Desk</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby — Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Counter resepsionis hotel kota yang rapi untuk pendaftaran tamu instansi, diklat, dan keluarga.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Wide shot area lobby yang memberikan kesan ruang pertama bagi pengunjung.</p>
           </div>
 
-          <!-- 2. Guest Lounge & Waiting Area -->
+          <!-- 2. Lobby — Reception / Front Desk -->
           <div class="gallery-item md:col-span-5 group cursor-pointer" data-id="lobby-2"
-               data-title="Lobby Hotel: Ruang Duduk Tamu &amp; Sofa Lobby"
-               data-category-label="Lobby Hotel &bull; Guest Waiting Lounge"
-               data-desc="Sofa ruang tunggu lobby dengan bantalan empuk rapi, meja kopi kayu, majalah koran harian, dan lantai keramik bersih yang terpelihara."
-               data-light="Cahaya Alami Pintu Kaca Depan + Lampu Plafon"
-               data-ratio="28mm &bull; f/3.5 Sudut Santai"
-               data-mood="Nyaman, Tenang &amp; Fungsional">
+               data-title="Lobby — Reception / Front Desk"
+               data-category-label="Lobby &bull; Meja Resepsionis"
+               data-desc="Foto area meja resepsionis hotel. Counter rapi, bersih dari kabel yang berserakan, dan siap melayani tamu yang datang check-in."
+               data-light="Available Room Light"
+               data-ratio="Standard / Wide (28–35mm)"
+               data-mood="Professional, Neat, Welcoming">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Ruang Tunggu Sofa Lobby Hotel Kota" 
+              <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Lobby — Reception / Front Desk" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 02 : Sofa Lounge
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Guest Lounge &amp; Area Tunggu Tamu</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Waiting Area</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby — Reception / Front Desk</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Wide (28–35mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Area nyaman saat rombongan tamu menunggu proses pembagian kunci kamar.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Meja pendaftaran dan pelayanan utama yang tertib dan profesional.</p>
           </div>
 
-          <!-- 3. Lobby Hallway & Elevator Access -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="lobby-3"
-               data-title="Lobby Hotel: Lorong Utama &amp; Akses Lift Tamu"
-               data-category-label="Lobby Hotel &bull; Lorong &amp; Lift"
-               data-desc="Lorong sirkulasi lobby berlantai granit bersih, penunjuk arah kamar dan ruang meeting (signage MICE), serta pintu lift penumpang."
-               data-light="Pencahayaan Koridor Merata Downlight"
-               data-ratio="24mm &bull; f/5.6 Sudut Simetris Lorong"
-               data-mood="Tertib, Luas &amp; Mudah Diakses">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
+          <!-- 3. Lobby — Guest Seating -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="lobby-3"
+               data-title="Lobby — Guest Seating"
+               data-category-label="Lobby &bull; Area Tunggu"
+               data-desc="Area kursi atau sofa tunggu di lobby jika tersedia. Menampilkan kerapian tempat duduk tamu saat menunggu proses check-in."
+               data-light="Natural / Soft Light"
+               data-ratio="Standard / Wide (28–35mm)"
+               data-mood="Comfortable, Clean">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Lorong Utama Lobby dan Akses Lift Hotel" 
+                 alt="Lobby — Guest Seating" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 03 : Koridor Utama
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 03</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby Hallway &amp; Elevator Corridor</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Main Corridor</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby — Guest Seating</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Wide (28–35mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memperlihatkan aksesibilitas yang jelas dan sirkulasi bersih menuju kamar lantai atas.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kenyamanan kursi tunggu tamu yang tertata teratur dan bersih.</p>
           </div>
 
-          <!-- 4. Front Desk Service Close-Up -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="lobby-4"
-               data-title="Lobby Hotel: Detail Penyerahan Kunci Kamar &amp; Registrasi"
-               data-category-label="Lobby Hotel &bull; Layanan Tamu"
-               data-desc="Interaksi penyerahan kunci kamar hotel dan kartu tanda tamu di meja resepsionis dengan senyum ramah petugas front desk berseragam rapi."
-               data-light="Cahaya Counter Hangat"
-               data-ratio="50mm &bull; f/2.8 Human Hospitality Angle"
-               data-mood="Keramahan Hangat &amp; Siap Melayani">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1587874522487-fe10e954d035?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Petugas Front Desk Menyambut Tamu Hotel" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 04 : Interaksi Check-in
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Guest Check-In &amp; Reception Hospitality</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Service Interaction</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menampilkan keramahan petugas front office dalam menyambut setiap pengunjung hotel.</p>
-          </div>
-
-          <!-- 5. Concierge & Luggage Bellhop Service -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="lobby-5"
-               data-title="Lobby Hotel: Troli Koper Bellhop &amp; Layanan Concierge"
-               data-category-label="Lobby Hotel &bull; Concierge &amp; Luggage"
-               data-desc="Troli koper emas hotel dengan koper kulit rapi di samping meja concierge, menandakan kesiapan pelayanan staf menyambut kedatangan rombongan."
-               data-light="Pencahayaan Lobby Utama Seimbang"
-               data-ratio="35mm &bull; f/3.2"
-               data-mood="Sigap, Prima &amp; Terorganisir">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Troli Koper Hotel Bellhop Concierge" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 05 : Concierge Service
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Bellhop Trolley &amp; Concierge Assistance</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Concierge Detail</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Detail pendukung penegasan standar pelayanan prima perhotelan.</p>
-          </div>
-
-          <!-- 6. Architectural Textures & Signage Detail -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="lobby-6"
-               data-title="Lobby Hotel: Detail Tekstur Marmer, Kayu &amp; Signage"
-               data-category-label="Lobby Hotel &bull; Materiality &amp; Signage"
-               data-desc="Foto close-up material interior lobby: serat kayu kisi-kisi dinding, kilau batu marmer lantai, serta plakat petunjuk arah ruangan Syahida Inn bernuansa kuningan elegan."
-               data-light="Lampu Sorot Accent Lighting Lembut"
-               data-ratio="50mm Macro &bull; f/2.8"
-               data-mood="Solid, Berkualitas &amp; Elegan">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
+          <!-- 4. Lobby — Corridor / Elevator Access -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="lobby-4"
+               data-title="Lobby — Corridor / Elevator Access"
+               data-category-label="Lobby &bull; Akses Menuju Kamar"
+               data-desc="Area lorong penghubung atau akses lift menuju kamar jika secara visual relevan. Memperlihatkan keteraturan sirkulasi tamu hotel."
+               data-light="Available Corridor Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Clean, Orderly, Functional">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Detail Materialitas Interior Lobby Hotel" 
+                 alt="Lobby — Corridor / Elevator Access" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Lobby &bull; Angle 06 : Materiality
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 04</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby Textures &amp; Directional Signage</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Texture Detail</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby — Corridor / Elevator Access</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sentuhan estetika material interior yang membangun citra profesional gedung.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Akses lift dan koridor yang jelas untuk navigasi kenyamanan tamu.</p>
+          </div>
+
+          <!-- 5. Lobby — Detail / Hotel Identity -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="lobby-5"
+               data-title="Lobby — Detail / Hotel Identity"
+               data-category-label="Lobby &bull; Identitas Hotel"
+               data-desc="Logo hotel, plang nama, elemen arsitektur, atau signage penunjuk arah yang memang ada di lokasi. Tidak perlu dekorasi buatan."
+               data-light="Natural / Soft Light"
+               data-ratio="Detail (50mm)"
+               data-mood="Neat, Recognizable">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Lobby — Detail / Hotel Identity" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 05</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Lobby — Detail / Hotel Identity</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Detail (50mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Signage atau identitas visual hotel yang memperkuat branding resmi.</p>
           </div>
         </div>
       </section>
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 4: FASILITAS HOTEL (BALLROOM & GYM)                     -->
+      <!-- HALAMAN 4: FASILITAS HOTEL (BALLROOM, MEETING, GYM, RESTO)    -->
       <!-- ============================================================== -->
       <section id="page-fasilitas" class="photoshoot-page hidden">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 04</span> &bull; <span>Fasilitas MICE &amp; Kebugaran</span>
+            <span>Bagian 04</span> &bull; <span>Fasilitas Relevan</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Fasilitas Hotel (Ballroom &amp; Gym)</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Fasilitas Hotel</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi sudut pemotretan fasilitas penunjang di Syahida Inn: Ballroom aula serbaguna untuk pesta pernikahan &amp; wisuda, ruang rapat seminar format classroom, serta fitness room hotel dengan treadmill dan alat kebugaran.
+            Fokus pada 4 fasilitas utama yang paling relevan untuk website dan proposal sales hotel: Ballroom/Aula, Ruang Rapat (Meeting Room), Gym/Fitness, dan Restoran/Café tanpa simulasi event yang rumit.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Real Ballroom / Hall Banquet Setup -->
+          <!-- A1. Ballroom / Aula — Wide Room Overview -->
           <div class="gallery-item md:col-span-7 group cursor-pointer" data-id="fas-1"
-               data-title="Fasilitas Hotel: Ballroom Aula Serbaguna &amp; Meja Acara"
-               data-category-label="Fasilitas &bull; Ballroom Acara"
-               data-desc="Aula ballroom serbaguna dengan susunan kursi acara banquet berbungkus kain putih bersih, karpet motif hotel, panggung utama di depan, proyektor, dan tata lampu gedung yang terang merata."
-               data-light="Pencahayaan Aula Meeting Downlight Merata"
-               data-ratio="24mm &bull; f/5.6 Sudut Luas Panggung &amp; Kursi"
-               data-mood="Rapi, Luas &amp; Siap Pakai Acara MICE">
+               data-title="Ballroom / Aula — Wide Room Overview"
+               data-category-label="Fasilitas &bull; Ballroom"
+               data-desc="Foto wide aula/ballroom yang memperlihatkan kapasitas dan luas ruangan secara meyakinkan. Nyalakan seluruh lampu gedung sebelum pengambilan gambar."
+               data-light="Available Hall Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Spacious, Orderly, Ready">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Ballroom Aula Serbaguna Hotel untuk Seminar dan Rapat" 
+                 alt="Ballroom / Aula — Wide Room Overview" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 01 : Ballroom / Aula
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Ballroom 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Ballroom Aula Serbaguna &amp; Seminar Hall</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Ballroom Overview</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Ballroom / Aula — Wide Room Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Fasilitas utama untuk acara pernikahan, seminar kampus, rapat dinas kementerian, dan wisuda.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Foto wide kapasitas aula untuk materi sales kit seminar dan acara instansi.</p>
           </div>
 
-          <!-- 2. Meeting Room Classroom Setup -->
+          <!-- A2. Ballroom / Aula — Layout & Stage Area -->
           <div class="gallery-item md:col-span-5 group cursor-pointer" data-id="fas-2"
-               data-title="Fasilitas Hotel: Ruang Rapat / Format Kelas (Classroom)"
-               data-category-label="Fasilitas &bull; Ruang Rapat Diklat"
-               data-desc="Penataan meja ruang rapat tipe kelas (classroom) dengan botol air mineral, pulpen, notepad materi rapat, layar presentasi, dan kursi ergonomis."
-               data-light="Lampu Ruang Rapat Terang 4000K"
-               data-ratio="35mm &bull; f/4.0 Sudut Simetris Meja"
-               data-mood="Serius, Tertib &amp; Produktif">
+               data-title="Ballroom / Aula — Layout &amp; Stage Area"
+               data-category-label="Fasilitas &bull; Stage &amp; Layout"
+               data-desc="Tampilan panggung depan atau penataan kursi acara banquet yang memang sudah disiapkan hotel tanpa menambahkan dekorasi wedding buatan."
+               data-light="Available Interior Light"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Functional, Neat">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Ruang Rapat Pelatihan Diklat Format Classroom" 
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Ballroom / Aula — Layout &amp; Stage Area" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 02 : Ruang Rapat
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Ballroom 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Classroom Setup &amp; Training Meeting Room</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Classroom View</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Ballroom / Aula — Layout &amp; Stage Area</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Acuan penting untuk proposal paket diklat, lokakarya, dan focus group discussion (FGD).</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Detail penataan panggung aktual dan kerapian baris meja ballroom.</p>
           </div>
 
-          <!-- 3. Gym Cardio & Treadmill Zone -->
+          <!-- B1. Meeting Room — Wide Overview -->
           <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-3"
-               data-title="Fasilitas Hotel: Ruang Gym &amp; Alat Treadmill"
-               data-category-label="Fasilitas &bull; Ruang Gym Hotel"
-               data-desc="Fasilitas ruang fitness hotel dengan treadmill elektrik yang terawat, sepeda statis, cermin dinding, dan pendingin ruangan sejuk."
-               data-light="Pencahayaan Ruang Olahraga Terang Sejuk"
-               data-ratio="28mm &bull; f/4.0"
-               data-mood="Bugar, Bersih &amp; Terawat">
+               data-title="Meeting Room — Wide Overview"
+               data-category-label="Fasilitas &bull; Meeting Room"
+               data-desc="Foto sudut lebar ruang rapat yang memperlihatkan susunan meja dan kursi secara tertata. Penting untuk penawaran paket meeting B2B."
+               data-light="Available Meeting Room Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Professional, Structured">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Fasilitas Fitness Center Hotel Treadmill dan Cardio" 
+              <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Meeting Room — Wide Overview" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 03 : Treadmill Gym
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Meeting 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Fitness Room &amp; Treadmill Area</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Cardio Angle</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Meeting Room — Wide Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Fasilitas olahraga praktis bagi tamu hotel yang sedang menginap untuk dinas atau liburan.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tampilan menyeluruh ruang meeting untuk kebutuhan proposal diklat dan pelatihan.</p>
           </div>
 
-          <!-- 4. Gym Free Weights & Dumbbell Rack -->
+          <!-- B2. Meeting Room — Table Setup -->
           <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-4"
-               data-title="Fasilitas Hotel: Rak Dumbbell &amp; Cermin Latihan"
-               data-category-label="Fasilitas &bull; Rak Beban Dumbbell"
-               data-desc="Rak set dumbbell dari ukuran ringan hingga sedang tertata rapi di atas lantai mat karet anti-slip dengan bench press latihan."
-               data-light="Lampu Plafon Gym Terang"
-               data-ratio="35mm &bull; f/3.2"
-               data-mood="Tertata, Higienis &amp; Fungsional">
+               data-title="Meeting Room — Table Setup"
+               data-category-label="Fasilitas &bull; Setup Meja Rapat"
+               data-desc="Penataan meja dan kursi rapat standar (notepad, botol air, alat tulis) yang rapi dan siap pakai. Menampilkan kesiapan operasional hotel."
+               data-light="Available Room Light"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Neat, Orderly">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Rak Dumbbell dan Beban Kebugaran Hotel" 
+                 alt="Meeting Room — Table Setup" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 04 : Dumbbell Rack
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Meeting 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Free-Weight Dumbbell Setup</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Weight Rack</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Meeting Room — Table Setup</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kelengkapan pendukung latihan angkat beban ringan bagi tamu hotel.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kerapian meja rapat aktual yang menjadi standar fasilitas pertemuan dinas.</p>
           </div>
 
-          <!-- 5. Coffee Break & Meeting Catering Setup -->
+          <!-- C1. Gym / Fitness — Wide Overview -->
           <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-5"
-               data-title="Fasilitas Hotel: Coffee Break &amp; Pastry Station Seminar"
-               data-category-label="Fasilitas &bull; Coffee Break MICE"
-               data-desc="Meja prasmanan coffee break seminar: deretan cangkir teh porselen, dispenser kopi panas, nampan kue basah tradisional, dan buah potong segar."
-               data-light="Pencahayaan Foyer Ruang Meeting Merata"
-               data-ratio="50mm &bull; f/2.8 Sudut 45 Derajat"
-               data-mood="Segar, Menggiurkan &amp; Menyenangkan">
+               data-title="Gym / Fitness — Wide Overview"
+               data-category-label="Fasilitas &bull; Ruang Fitness"
+               data-desc="Foto sudut lebar ruang gym yang memperlihatkan kebersihan ruangan, cermin, dan tata letak alat kebugaran yang tersedia."
+               data-light="Available Gym Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Clean, Functional">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Coffee Break Ruang Meeting Fasilitas Hotel" 
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Gym / Fitness — Wide Overview" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 05 : Coffee Break
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Gym 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Coffee Break &amp; Seminar Catering Station</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Catering View</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Gym / Fitness — Wide Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Aspek penting dalam penawaran paket meeting full-day dan half-day instansi.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tampilan menyeluruh fasilitas kebugaran untuk kelengkapan info listing kamar.</p>
           </div>
 
-          <!-- 6. Gym Wellness & Mat Stretching Area -->
+          <!-- C2. Gym / Fitness — Equipment Detail -->
           <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-6"
-               data-title="Fasilitas Hotel: Area Matras Yoga &amp; Peregangan Kebugaran"
-               data-category-label="Fasilitas &bull; Wellness &amp; Stretching"
-               data-desc="Area sudut relaksasi gym dengan matras yoga tergelar rapi, gym ball, handuk gym bersih bertumpuk, dan dispenser air mineral."
-               data-light="Daylight Sejuk Jendela Gym"
-               data-ratio="35mm &bull; f/3.5"
-               data-mood="Sehat, Bugar &amp; Menyegarkan">
+               data-title="Gym / Fitness — Equipment Detail"
+               data-category-label="Fasilitas &bull; Alat Kebugaran"
+               data-desc="Dokumentasi alat fitness yang tersedia (treadmill atau dumbell) secara natural tanpa perlu model berolahraga atau pemisahan shot berlebihan."
+               data-light="Available Interior Light"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Neat, Ready">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Yoga Matras Stretching Fasilitas Kebugaran Hotel" 
+                 alt="Gym / Fitness — Equipment Detail" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Fasilitas &bull; Angle 06 : Yoga &amp; Wellness
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Gym 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Yoga Mat &amp; Wellness Stretching Zone</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Wellness Corner</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Gym / Fitness — Equipment Detail</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menunjukkan perhatian hotel terhadap kesehatan dan kebugaran holistik para tamu.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Dokumentasi alat olahraga aktual yang terawat dan siap digunakan tamu.</p>
+          </div>
+
+          <!-- D1. Restaurant / Café — Interior Overview -->
+          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-7"
+               data-title="Restaurant / Café — Interior Overview"
+               data-category-label="Fasilitas &bull; Restoran Hotel"
+               data-desc="Foto sudut lebar interior restoran atau area sarapan hotel. Menampilkan kapasitas tempat duduk, kebersihan lantai, dan suasana bersantap yang nyaman."
+               data-light="Natural / Available Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Clean, Welcoming, Comfortable">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Restaurant / Café — Interior Overview" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Resto 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Restaurant / Café — Interior Overview</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Gambaran luas area makan hotel untuk keperluan breakfast dan jamuan rombongan.</p>
+          </div>
+
+          <!-- D2. Restaurant / Café — Dining Seating Area -->
+          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="fas-8"
+               data-title="Restaurant / Café — Dining Seating Area"
+               data-category-label="Fasilitas &bull; Area Tempat Duduk"
+               data-desc="Penataan meja dan kursi makan restoran dengan jarak sirkulasi yang tertata rapi. Fokus pada kenyamanan tempat duduk bagi tamu dan keluarga."
+               data-light="Natural / Soft Light"
+               data-ratio="Standard (35–50mm)"
+               data-mood="Neat, Comfortable">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef7?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Restaurant / Café — Dining Seating Area" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Resto 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Restaurant / Café — Dining Seating Area</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (35–50mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Penataan meja makan restoran yang bersih dan siap melayani tamu sarapan.</p>
           </div>
         </div>
       </section>
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 5: EKSTERIOR HOTEL (TAMPAK DEPAN & TAMPAK SAMPING)    -->
+      <!-- HALAMAN 5: EKSTERIOR GEDUNG (5 ANGLE UTAMA REALISTIS)         -->
       <!-- ============================================================== -->
       <section id="page-eksterior" class="photoshoot-page hidden">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 05</span> &bull; <span>Arsitektur Gedung Hotel Kota</span>
+            <span>Bagian 05</span> &bull; <span>5 Angle Utama</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Eksterior Gedung Syahida Inn</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Eksterior Gedung</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi sudut pemotretan gedung hotel kota bertingkat (mid-rise): Tampak Depan arsitektur gedung dengan kanopi drop-off mobil dan papan nama hotel, serta Tampak Samping yang memperlihatkan deretan jendela kamar dan area parkir.
+            Membantu calon tamu memahami wujud nyata fisik hotel: tampak depan bangunan, akses masuk, drop-off, lahan parkir, serta shot senja opsional yang tidak membebani waktu produksi.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Real City Hotel Façade (Tampak Depan) -->
+          <!-- 1. Exterior — Main Facade -->
           <div class="gallery-item md:col-span-7 group cursor-pointer" data-id="ext-1"
-               data-title="Eksterior Hotel: Gedung Hotel Tampak Depan (Main Façade)"
-               data-category-label="Eksterior &bull; Tampak Depan Gedung"
-               data-desc="Foto tampak depan gedung hotel bertingkat dengan arsitektur modern simpel khas hotel kota, papan nama hotel di atas pintu masuk, dan langit cerah pagi hari."
-               data-light="Pagi Jam 08.30 Langit Biru Cerah (Cahaya Depan)"
-               data-ratio="24mm &bull; f/8.0 Perspektif Bangunan Tegak"
-               data-mood="Kokoh, Resmi, Bersih &amp; Mudah Dikenali">
+               data-title="Exterior — Main Facade"
+               data-category-label="Eksterior &bull; Tampak Depan"
+               data-desc="Tampilan tampak depan bangunan hotel. Sudut bersih yang memperlihatkan nama hotel dan bentuk gedung secara jelas untuk profil Google Maps dan OTA."
+               data-light="Natural Daylight"
+               data-ratio="Wide (24mm)"
+               data-mood="Clean, Recognizable, Solid">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Gedung Hotel Kota Bertingkat Tampak Depan" 
+                 alt="Exterior — Main Facade" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 01 : Tampak Depan
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Tampak Depan (Main Front Façade)</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Front Elevation</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Exterior — Main Facade</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Foto penanda utama gedung hotel untuk profil Google Business, website pemesanan, dan brosur.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Tampilan utama gedung hotel untuk identitas visual di Google Business dan situs pemesanan.</p>
           </div>
 
-          <!-- 2. Drop-Off Canopy & Main Entrance Porch -->
+          <!-- 2. Exterior — Main Entrance -->
           <div class="gallery-item md:col-span-5 group cursor-pointer" data-id="ext-2"
-               data-title="Eksterior Hotel: Area Drop-Off Mobil &amp; Kanopi Masuk"
-               data-category-label="Eksterior &bull; Drop-Off Kanopi"
-               data-desc="Area kedatangan tamu dengan kanopi teduh untuk mobil drop-off, pintu geser kaca lobby, dan area jalan masuk yang bersih dan teratur."
-               data-light="Daylight Pagi Terang Alami"
-               data-ratio="28mm &bull; f/5.0"
-               data-mood="Akses Praktis &amp; Ramah Tamu">
+               data-title="Exterior — Main Entrance"
+               data-category-label="Eksterior &bull; Pintu Masuk Utama"
+               data-desc="Foto akses pintu masuk utama hotel. Menunjukkan gerbang kedatangan yang mudah diidentifikasi tamu saat pertama kali tiba di lokasi."
+               data-light="Natural Daylight"
+               data-ratio="Standard / Wide (28–35mm)"
+               data-mood="Welcoming, Clear">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Kanopi Drop Off Mobil Pintu Masuk Hotel" 
+                 alt="Exterior — Main Entrance" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 02 : Drop-Off
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Drop-Off Canopy &amp; Entrance Porch</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">28mm &bull; Porch Entrance</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Exterior — Main Entrance</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Wide (28–35mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menunjukkan kemudahan akses antar-jemput taksi, mobil dinas, maupun bus rombongan acara.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Akses masuk utama yang memberikan kepastian rute kedatangan bagi tamu hotel.</p>
           </div>
 
-          <!-- 3. Real Side Façade & Room Windows -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="ext-3"
-               data-title="Eksterior Hotel: Arsitektur Gedung Tampak Samping"
-               data-category-label="Eksterior &bull; Tampak Samping"
-               data-desc="Sudut samping bangunan hotel bertingkat memperlihatkan barisan jendela kamar hotel, kisi ventilasi, dan proporsi bangunan secara menyeluruh."
-               data-light="Cahaya Sinar Pagi dari Samping Bangunan"
-               data-ratio="35mm &bull; f/8.0 Sudut Tiga Dimensi"
-               data-mood="Proporsional &amp; Rapi">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Gedung Hotel Bertingkat Tampak Samping" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 03 : Tampak Samping
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Tampak Samping (Side Elevation)</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Side Profile</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Menampilkan dimensi samping gedung dengan jajaran jendela kamar yang tertata rapi.</p>
-          </div>
-
-          <!-- 4. Parking Grounds & Surrounding Access -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="ext-4"
-               data-title="Eksterior Hotel: Area Parkir Kendaraan &amp; Halaman Luar"
-               data-category-label="Eksterior &bull; Halaman &amp; Parkir"
-               data-desc="Area parkir mobil dan motor yang aman dan memadai di depan/samping gedung hotel dengan pepohonan peneduh dan akses jalan aspal."
-               data-light="Cahaya Siang Hari Alami"
-               data-ratio="24mm &bull; f/6.3 Sudut Lebar Lapangan"
-               data-mood="Aman, Luas &amp; Tertata">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Halaman Luar dan Area Parkir Hotel" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 04 : Parkir &amp; Halaman
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Parking Lot &amp; Building Grounds</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Parking Grounds</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memberi kepastian daya tampung kendaraan bagi penyelenggara rapat dan tamu pesta pernikahan.</p>
-          </div>
-
-          <!-- 5. Twilight Blue Hour Architecture Shot -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="ext-5"
-               data-title="Eksterior Hotel: Arsitektur Gedung Senja / Blue Hour"
-               data-category-label="Eksterior &bull; Twilight Blue Hour"
-               data-desc="Bidikan gedung hotel saat senja (blue hour) dengan lampu fasad arsitektural menyala hangat keemasan, menghadirkan nuansa premium dan dramatis."
-               data-light="Senja Blue Hour 18.00 + Lampu Arsitektur Fasad"
-               data-ratio="24mm &bull; f/8.0 Long Exposure Tripod"
-               data-mood="Megah, Hangat, Mengundang &amp; Berkelas">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Gedung Hotel Malam Hari Blue Hour Lighting" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 05 : Twilight Blue Hour
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Twilight Blue Hour &amp; Fasad Illumination</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">24mm &bull; Twilight Shot</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Foto pamungkas untuk sampul annual report dan banner utama website resmi.</p>
-          </div>
-
-          <!-- 6. Driveway Arrival & Pedestrian Entrance -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="ext-6"
-               data-title="Eksterior Hotel: Gerbang Masuk &amp; Akses Jalan Driveway"
-               data-category-label="Eksterior &bull; Gerbang &amp; Driveway"
-               data-desc="Perspektif jalur masuk kendaraan dari jalan raya dengan plang nama Syahida Inn yang jelas terbaca, tanaman lanskap asri, dan pos keamanan yang rapi."
-               data-light="Daylight Pagi Bersih"
-               data-ratio="35mm &bull; f/5.6 Sejajar Jalan Masuk"
-               data-mood="Jelas, Tertib &amp; Mudah Diakses">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
+          <!-- 3. Exterior — Drop-off / Arrival -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="ext-3"
+               data-title="Exterior — Drop-off / Arrival"
+               data-category-label="Eksterior &bull; Area Drop-Off"
+               data-desc="Area kedatangan kendaraan di bawah kanopi jika memang tersedia dan layak difoto. Bebaskan area dari kendaraan parkir liar sebelum shot."
+               data-light="Natural / Available Light"
+               data-ratio="Wide (24–28mm)"
+               data-mood="Accessible, Functional">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Gerbang Masuk dan Driveway Hotel" 
+                 alt="Exterior — Drop-off / Arrival" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Eksterior &bull; Angle 06 : Driveway Entrance
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 03</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Main Driveway &amp; Signpost Arrival</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Street Level</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Exterior — Drop-off / Arrival</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24–28mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memudahkan calon tamu mengenali gerbang masuk fisik hotel dari jalan utama.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kemudahan akses antar-jemput kendaraan roda empat di lobi depan hotel.</p>
+          </div>
+
+          <!-- 4. Exterior — Parking / Access -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="ext-4"
+               data-title="Exterior — Parking / Access"
+               data-category-label="Eksterior &bull; Parkir &amp; Akses"
+               data-desc="Foto yang membantu calon tamu memahami ketersediaan parkir kendaraan hotel. Jangan dipaksakan bila sudut pandang area tidak menarik."
+               data-light="Natural Daylight"
+               data-ratio="Wide (24mm)"
+               data-mood="Functional, Orderly">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Exterior — Parking / Access" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 04</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Exterior — Parking / Access</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Memberikan kepastian daya tampung kendaraan bagi tamu seminar dan keluarga.</p>
+          </div>
+
+          <!-- 5. Exterior — Twilight / Evening (Optional) -->
+          <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="ext-5"
+               data-title="Exterior — Twilight / Evening (Optional)"
+               data-category-label="Eksterior &bull; Twilight (Opsional)"
+               data-desc="Foto gedung saat senja dengan lampu fasad menyala. Hanya dilakukan jika jadwal memungkinkan dan pencahayaan gedung hotel memang layak."
+               data-light="Twilight / Available Accent Light"
+               data-ratio="Wide (24mm)"
+               data-mood="Warm, Welcoming">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=80" 
+                 alt="Exterior — Twilight / Evening (Optional)" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-stone-500 text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Angle 05 (Opsional)</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Exterior — Twilight / Evening</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Wide (24mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Shot senja opsional untuk banner pelengkap website bila jadwal memungkinkan.</p>
           </div>
         </div>
       </section>
 
       <!-- ============================================================== -->
-      <!-- HALAMAN 6: MENU MAKANAN (ASET BUKU MENU RESTORAN)             -->
+      <!-- HALAMAN 6: SIGNATURE F&B SELECTION (PLACEHOLDER REALISTIS)    -->
       <!-- ============================================================== -->
       <section id="page-menu" class="photoshoot-page hidden">
         <div class="border-b border-stone-200/80 pb-6 mb-8">
           <div class="flex items-center gap-2 text-[10px] uppercase font-mono tracking-editorial text-terracotta">
-            <span>Bagian 06</span> &bull; <span>Restoran &amp; Room Service Syahida Inn</span>
+            <span>Bagian 06</span> &bull; <span>Signature Selection</span>
           </div>
-          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Menu Makanan (Aset Buku Menu)</h1>
+          <h1 class="font-serif text-3xl sm:text-5xl text-espresso mt-1">Signature F&amp;B Selection</h1>
           <p class="text-xs md:text-sm text-charcoal/70 font-light mt-2 max-w-3xl leading-relaxed">
-            Koleksi foto fokus murni 100% pada sajian piring makanan untuk desain cetak buku menu restoran &amp; room service: Piring hidangan daging panggang utama, olahan ayam goreng/bakar rempah, hidangan nasi goreng &amp; sate nusantara, sup mangkuk pembuka hangat, sarapan telur hotel, serta dessert manis.
+            Hanya memotret menu unggulan (3–4 makanan signature + 2–3 minuman signature) untuk aset buku menu dan website. Nama menu di bawah berstatus placeholder sampai daftar menu aktual hotel dikonfirmasi.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <!-- 1. Signature Main Dish - Daging / Steak Panggang -->
+          <!-- 1. Hero Food Shot [Placeholder] -->
           <div class="gallery-item md:col-span-8 group cursor-pointer" data-id="menu-1"
-               data-title="Menu Makanan: Daging Panggang Saus Glaze &amp; Herba"
-               data-category-label="Buku Menu &bull; Hidangan Utama Daging"
-               data-desc="Foto close-up piring hidangan utama: potongan daging bakar bertekstur juicy dengan olesan saus kecokelatan mengkilap gurih, taburan herba segar, dan kentang pendamping yang tertata rapi di piring datar."
-               data-light="Cahaya Samping Jendela 45&deg; + Reflektor Putih"
-               data-ratio="85mm Macro &bull; f/3.5 Ketajaman Tekstur Daging"
-               data-mood="Lezat, Menggugah Selera &amp; Mengkilap">
+               data-title="Signature Menu 01 — Hero Food Shot"
+               data-category-label="Signature F&amp;B &bull; Food 01"
+               data-desc="Foto hero hidangan utama signature hotel. Sudut 45 derajat bersih yang memperlihatkan plating asli koki hotel dan piring resmi tanpa garnish berlebihan."
+               data-light="Controlled Lighting"
+               data-ratio="Standard (50mm)"
+               data-mood="Clean, Appetizing, Fresh">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/10] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80" 
-                 alt="Foto Hidangan Utama Daging Panggang untuk Buku Menu" 
+                 alt="Signature Menu 01 — Hero Food Shot" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 01 : Daging Panggang
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Food 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Roasted Beef Steak with Glaze Sauce</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">85mm Macro &bull; Main Course</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Menu 01 — Hero Food Shot</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Fokus tajam pada kilau saus dan serat daging gurih untuk halaman menu utama restoran.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Hero image menu andalan hotel untuk cover buku menu dan landing page website.</p>
           </div>
 
-          <!-- 2. Menu Ayam Panggang Rempah -->
+          <!-- 2. Second Signature Dish [Placeholder] -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="menu-2"
-               data-title="Menu Makanan: Olahan Ayam Bakar / Goreng Rempah"
-               data-category-label="Buku Menu &bull; Olahan Ayam"
-               data-desc="Potongan ayam bakar berkulit keemasan renyah dengan taburan wijen dan irisan cabai hijau segar di atas piring stoneware tembikar hitam."
-               data-light="Diffused Softbox 45 Derajat dari Kiri"
-               data-ratio="60mm &bull; f/3.2"
-               data-mood="Gurih, Hangat &amp; Kaya Rempah">
+               data-title="Signature Menu 02 — Second Signature Dish"
+               data-category-label="Signature F&amp;B &bull; Food 02"
+               data-desc="Hidangan signature kedua (olahan ayam atau nasi khas). Fokus pada kehangatan dan proporsi sajian asli tanpa mengubah bentuk makanan."
+               data-light="Controlled Lighting"
+               data-ratio="Standard / Detail (50–85mm)"
+               data-mood="Appetizing, Neat">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-[4/5] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Foto Olahan Ayam Rempah untuk Buku Menu" 
+                 alt="Signature Menu 02 — Second Signature Dish" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 02 : Olahan Ayam
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Food 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Roasted Chicken with Herb Garnish</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">60mm &bull; Poultry Menu</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Menu 02 — Second Dish</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Detail (50–85mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sajian favorit keluarga dan peserta rapat dengan tampilan plating rapi dan menggiurkan.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Pilihan hidangan signature kedua yang mewakili variasi menu restoran.</p>
           </div>
 
-          <!-- 3. Menu Nusantara & Sate -->
+          <!-- 3. Third Signature Dish [Placeholder] -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="menu-3"
-               data-title="Menu Makanan: Nasi Rempah &amp; Sate Nusantara"
-               data-category-label="Buku Menu &bull; Menu Nusantara"
-               data-desc="Piring komplit khas nusantara: nasi wangi, tusukan sate dengan saus bumbu kacang kental, acar segar, dan kerupuk renyah."
-               data-light="Pencahayaan Samping Alami Tajam"
-               data-ratio="50mm &bull; f/3.0"
-               data-mood="Autentik, Kaya Rasa &amp; Tradisional">
+               data-title="Signature Menu 03 — Third Signature Dish"
+               data-category-label="Signature F&amp;B &bull; Food 03"
+               data-desc="Menu nusantara atau menu favorit tamu. Menampilkan lauk utama dan piring saji yang digunakan sehari-hari di restoran hotel."
+               data-light="Soft / Controlled Light"
+               data-ratio="Standard (50mm)"
+               data-mood="Clean, Authentic">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Foto Sate dan Nasi Rempah Nusantara untuk Buku Menu" 
+                 alt="Signature Menu 03 — Third Signature Dish" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 03 : Nusantara
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Food 03</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Indonesian Satay &amp; Spiced Rice</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Asian Specialty</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Menu 03 — Third Dish</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard (50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kategori menu nusantara unggulan yang wajib ada di setiap hotel Indonesia.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sajian khas nusantara yang populer bagi peserta rapat dan tamu keluarga.</p>
           </div>
 
-          <!-- 4. Mangkuk Sup Pembuka Hangat -->
+          <!-- 4. Optional Breakfast / Popular Item [Placeholder] -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="menu-4"
-               data-title="Menu Makanan: Mangkuk Sup Hangat &amp; Bawang Goreng"
-               data-category-label="Buku Menu &bull; Sup &amp; Kuah Hangat"
-               data-desc="Sajian mangkuk sup kaldu bening hangat dengan potongan daging/sayur wortel empuk, seledri segar, dan taburan bawang goreng harum di mangkuk keramik putih."
-               data-light="Overhead Diffused Light 45&deg;"
-               data-ratio="50mm &bull; f/3.2"
-               data-mood="Hangat, Segar &amp; Menenangkan">
+               data-title="Signature Menu 04 — Breakfast / Popular Item"
+               data-category-label="Signature F&amp;B &bull; Food 04"
+               data-desc="Hidangan sarapan populer atau sup hangat andalan hotel. Menampilkan sajian segar siap santap dengan penataan mangkuk/piring rapi."
+               data-light="Natural / Soft Light"
+               data-ratio="Standard / Detail (50mm)"
+               data-mood="Warm, Fresh, Simple">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
               <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Foto Mangkuk Sup Hangat Buku Menu Restoran" 
+                 alt="Signature Menu 04 — Breakfast / Popular Item" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 04 : Sup Hangat
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Food 04</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Warm Comfort Soup Bowl</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Soup Menu</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Menu 04 — Breakfast / Soup Item</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Detail (50mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Pilihan hidangan kuah hangat yang cocok untuk santap malam atau menu buffet makan siang.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sajian sarapan atau kuah hangat favorit yang mengisi bagian menu makan pagi.</p>
           </div>
 
-          <!-- 5. Artisanal Dessert & Cake -->
+          <!-- 5. Signature Beverage 01 [Placeholder] -->
           <div class="gallery-item md:col-span-4 group cursor-pointer" data-id="menu-5"
-               data-title="Menu Makanan: Hidangan Penutup &amp; Cake Plating"
-               data-category-label="Buku Menu &bull; Dessert &amp; Pastry"
-               data-desc="Potongan kue lembut berlapis saus karamel/buah berry, taburan gula halus, dan hiasan mint segar di piring saji keramik modern."
-               data-light="Pencahayaan Jendela Lembut Samping"
-               data-ratio="60mm &bull; f/2.8"
-               data-mood="Manis, Halus &amp; Cantik">
+               data-title="Signature Beverage 01 — Coffee / Specialty"
+               data-category-label="Signature F&amp;B &bull; Beverage 01"
+               data-desc="Minuman signature utama hotel (kopi atau minuman racikan khas) disajikan dalam cangkir/gelas hotel yang bersih."
+               data-light="Controlled / Soft Light"
+               data-ratio="Standard / Detail (50–85mm)"
+               data-mood="Clean, Appetizing">
             <div class="drop-zone relative overflow-hidden bg-linen aspect-square border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=80" 
-                 alt="Foto Dessert dan Cake untuk Buku Menu Restoran" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 05 : Dessert
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Artisanal Dessert &amp; Cake Plating</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">60mm &bull; Dessert Shot</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Penutup manis dengan presentasi artistik untuk menutup santap makan tamu.</p>
-          </div>
-
-          <!-- 6. Breakfast Spread Overhead (Flat Lay) -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="menu-6"
-               data-title="Menu Makanan: Flat Lay Sarapan Buffet &amp; Roti Pastry"
-               data-category-label="Buku Menu &bull; Buffet Breakfast Spread"
-               data-desc="Bidik overhead 90 derajat (flat lay) meja sarapan hotel: piring omelet telur lembut, sosis panggang, mangkuk salad buah tropis, butter, selai, dan jus segar."
-               data-light="Top Diffused Daylight Rata Tanpa Bayangan Tajam"
-               data-ratio="35mm &bull; f/4.0 90-Degree Top Down Flat Lay"
-               data-mood="Berlimpah, Bergizi, Cerah &amp; Menggugah Selera">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
-              <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Overhead Flat Lay Sarapan Hotel Buku Menu" 
-                 class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 06 : Breakfast Spread
-              </div>
-            </div>
-            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Hotel Breakfast Spread (Flat Lay Framing)</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">35mm &bull; Flat Lay Overhead</span>
-            </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Bidikan editorial multi-menu yang ideal untuk halaman depan buku menu restoran hotel.</p>
-          </div>
-
-          <!-- 7. Specialty Beverage & Barista Coffee -->
-          <div class="gallery-item md:col-span-6 group cursor-pointer" data-id="menu-7"
-               data-title="Menu Makanan: Signature Coffee, Latte Art &amp; Refreshment"
-               data-category-label="Buku Menu &bull; Minuman &amp; Barista Coffee"
-               data-desc="Bidikan artistik cangkir keramik latte dengan tekstur mikro-foam rosetta yang presisi, diapit gelas minuman es teh leci bersirup segar dan biji kopi panggang."
-               data-light="Sinar Matahari Miring 45&deg; + Reflektor Emas Halus"
-               data-ratio="50mm &bull; f/2.2 Shallow DOF Minuman"
-               data-mood="Aromatik, Segar &amp; Menenangkan">
-            <div class="drop-zone relative overflow-hidden bg-linen aspect-[16/11] border border-stone-200">
               <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1400&q=80" 
-                 alt="Minuman Kopi Latte Art dan Minuman Segar Restoran" 
+                 alt="Signature Beverage 01 — Coffee / Specialty" 
                  class="editorial-img w-full h-full object-cover" />
-              <div class="absolute top-4 left-4 bg-alabaster/90 px-2.5 py-1 text-[10px] uppercase font-mono tracking-editorial text-charcoal pointer-events-none">
-                Buku Menu &bull; Plate 07 : Beverage
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Bev 01</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
               </div>
             </div>
             <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
-              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Artisanal Barista Coffee &amp; Refreshment</h3>
-              <span class="text-[11px] font-mono text-charcoal/40">50mm &bull; Beverage Shot</span>
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Beverage 01</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Detail (50–85mm)</span>
             </div>
-            <p class="text-xs text-charcoal/70 font-light mt-1.5">Kategori minuman pendamping dan kopi santai untuk lounge dan room service.</p>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Minuman signature utama untuk halaman minuman buku menu hotel.</p>
+          </div>
+
+          <!-- 6. Signature Beverage 02 [Placeholder] -->
+          <div class="gallery-item md:col-span-12 group cursor-pointer" data-id="menu-6"
+               data-title="Signature Beverage 02 — Refreshing Drink"
+               data-category-label="Signature F&amp;B &bull; Beverage 02"
+               data-desc="Minuman dingin penyegar (jus segar atau teh dingin khas) dengan warna alami yang menarik. Dipotret sesaat sebelum es mencair."
+               data-light="Controlled / Soft Light"
+               data-ratio="Standard / Detail (50–85mm)"
+               data-mood="Fresh, Vibrant">
+            <div class="drop-zone relative overflow-hidden bg-linen aspect-[21/9] border border-stone-200">
+              <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Signature Beverage 02 — Refreshing Drink" 
+                 class="editorial-img w-full h-full object-cover" />
+              <div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none">
+                <span class="bg-espresso text-paper px-2 py-0.5 text-[9px] uppercase font-mono font-bold tracking-wider">Bev 02</span>
+                <span class="bg-alabaster/90 px-2 py-0.5 text-[9px] uppercase font-mono tracking-editorial text-charcoal">Visual Reference</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-baseline justify-between border-b border-stone-200 pb-2">
+              <h3 class="font-serif text-xl text-espresso group-hover:text-terracotta transition-colors">Signature Beverage 02 — Refreshing Drink</h3>
+              <span class="text-[11px] font-mono text-charcoal/50">Standard / Detail (50–85mm)</span>
+            </div>
+            <p class="text-xs text-charcoal/70 font-light mt-1.5">Sajian penyegar dingin yang melengkapi pilihan menu minuman restoran hotel.</p>
           </div>
         </div>
       </section>
@@ -1256,7 +1179,7 @@
       </div>
 
       <div class="flex flex-wrap items-center gap-6 text-xs font-mono tracking-editorial uppercase text-charcoal/60">
-        <span>Kamar Deluxe &bull; Suite &bull; Lobby &bull; Ballroom &bull; Gym &bull; Eksterior &bull; Menu Makanan</span>
+        <span>Kamar Deluxe &bull; Suite &bull; Lobby &bull; Fasilitas Hotel &bull; Eksterior Gedung &bull; Signature F&amp;B Selection</span>
         <a href="#pages-container" class="text-terracotta hover:underline">Ke Bagian Atas &uarr;</a>
       </div>
     </div>
@@ -1659,9 +1582,9 @@
       '1. Kamar Deluxe',
       '2. Kamar Suite',
       '3. Lobby Hotel',
-      '4. Fasilitas (Ballroom & Gym)',
+      '4. Fasilitas Hotel',
       '5. Eksterior Gedung',
-      '6. Menu Makanan'
+      '6. Signature F&B Selection'
     ];
 
     let currentPageIndex = 0;
