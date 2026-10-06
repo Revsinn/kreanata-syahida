@@ -181,8 +181,8 @@
           <span id="realtime-status-dot" class="inline-block w-2 h-2 rounded-full bg-stone-400"></span>
           <span id="realtime-status-text">OFFLINE</span>
         </div>
-        <span class="w-px h-3 bg-stone-300"></span>
-        <button onclick="resetAllCustomImages()" class="text-charcoal/60 hover:text-terracotta transition-colors flex items-center gap-1.5 text-[11px] uppercase font-mono">
+        <span id="header-reset-divider" class="w-px h-3 bg-stone-300"></span>
+        <button id="header-reset-btn" onclick="resetAllCustomImages()" class="text-charcoal/60 hover:text-terracotta transition-colors flex items-center gap-1.5 text-[11px] uppercase font-mono">
           <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
           <span>Reset Semua</span>
         </button>
@@ -1155,6 +1155,12 @@
   <!-- Shared Realtime Moodboard Script via Supabase -->
   <script>
     // -------------------------------------------------------------
+    // 0. EDIT MODE TOGGLE (CLIENT PREVIEW / READ-ONLY)
+    // -------------------------------------------------------------
+    // Ubah ke true jika ingin mengaktifkan kembali fitur edit & upload
+    const EDIT_MODE = false;
+
+    // -------------------------------------------------------------
     // 1. SUPABASE CLIENT CONFIGURATION & CONSTANTS
     // -------------------------------------------------------------
     const SUPABASE_URL = 'https://gnuvmwfouavxgxahhvae.supabase.co';
@@ -1204,8 +1210,8 @@
         defaultImageMap.set(cardId, img.src);
       }
 
-      // Tombol Aksi Upload File & Input URL
-      if (dropZone && !dropZone.querySelector('.edit-overlay-btn')) {
+      // Tombol Aksi Upload File & Input URL (Hanya aktif jika EDIT_MODE = true)
+      if (EDIT_MODE && dropZone && !dropZone.querySelector('.edit-overlay-btn')) {
         const actionWrap = document.createElement('div');
         actionWrap.className = 'edit-overlay-btn absolute bottom-3 right-3 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-auto';
         actionWrap.innerHTML = `
@@ -1221,8 +1227,8 @@
         dropZone.appendChild(actionWrap);
       }
 
-      // Setup Drag & Drop listeners pada drop-zone
-      if (dropZone) {
+      // Setup Drag & Drop listeners pada drop-zone (Hanya aktif jika EDIT_MODE = true)
+      if (EDIT_MODE && dropZone) {
         dropZone.addEventListener('dragover', (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -1269,8 +1275,10 @@
     // File picker trigger function
     function triggerFilePicker(cardId, event) {
       if (event) event.stopPropagation();
+      if (!EDIT_MODE) return;
       if (activeUploads.has(cardId)) return;
       targetCardIdForPicker = cardId;
+      if (!cardFilePicker) return;
       cardFilePicker.value = '';
       cardFilePicker.click();
     }
@@ -1323,6 +1331,7 @@
     }
 
     async function handleFileUpload(cardId, file) {
+      if (!EDIT_MODE) return;
       if (!file) return;
 
       // Validasi tipe file (hanya JPEG, PNG, WEBP, GIF)
@@ -1534,6 +1543,7 @@
 
     function openAssetModal(cardId, e) {
       if (e) e.stopPropagation();
+      if (!EDIT_MODE) return;
       currentEditingCardId = cardId;
       const card = document.querySelector(`[data-id="${cardId}"]`);
       if (card) {
@@ -1660,6 +1670,7 @@
 
     // Reset Semua Foto ke Default HTML via Supabase Delete
     async function resetAllCustomImages() {
+      if (!EDIT_MODE) return;
       if (!confirm('Apakah Anda yakin ingin mengembalikan SEMUA foto referensi ke default? Tindakan ini berlaku untuk seluruh device.')) {
         return;
       }
@@ -1766,6 +1777,14 @@
         showPage(currentPageIndex + 1);
       }
     });
+
+    // Sembunyikan kontrol reset di topbar jika EDIT_MODE = false
+    if (!EDIT_MODE) {
+      const headerResetBtn = document.getElementById('header-reset-btn');
+      const headerResetDivider = document.getElementById('header-reset-divider');
+      if (headerResetBtn) headerResetBtn.style.display = 'none';
+      if (headerResetDivider) headerResetDivider.style.display = 'none';
+    }
 
     // Initialize to first page
     showPage(0);
